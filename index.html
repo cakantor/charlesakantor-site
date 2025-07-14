@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Charles A. Kantor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal page of Charles A. Kantor">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 20px;
+      color: #0b0b0b;
+      background: #fafafa;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 500;
+      margin: 0 0 0.5em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transition: transform .3s ease;
+    }
+
+    a:hover::after {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Charles&nbsp;A.&nbsp;Kantor</h1>
+    <p><a href="mailto:ck@charlesakantor.com">ck@charlesakantor.com</a></p>
+  </div>
+</body>
+</html>
