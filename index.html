@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <title>Charles A. Kantor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="QLxUsXE3xCu4-bQdInLJfveCsNmevs5PJY3MYmJ23E8" />
+
   <meta name="description" content="Personal page of Charles A. Kantor">
 
   <!-- Canonical URL -->
@@ -32,11 +36,10 @@
     "url":"https://charlesakantor.com",
     "email":"mailto:ck@charlesakantor.com",
     "image":"https://charlesakantor.com/avatar.png",
-    "jobTitle":"Your Primary Role or Expertise",
+    "jobTitle":"AI Entrepreneur, Investor",
     "sameAs":[
       "https://x.com/charlesakantor",
-      "https://www.linkedin.com/in/charlesakantor/",
-      "https://github.com/charlesakantor"
+      "https://www.linkedin.com/in/charlesakantor/"
     ]
   }
   </script>
@@ -88,7 +91,7 @@
     /* --- Theme toggle --- */
     let currentTheme='system';
     function applyTheme(t){document.documentElement.dataset.theme=t;updateToggleIcon();}
-    function updateToggleIcon(){const i=document.querySelector('.theme-icon');i.innerHTML=currentTheme==='dark'?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>':currentTheme==='light'?'<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>':'<rect x="2" y="4" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="2"/>';}
+    function updateToggleIcon(){const i=document.querySelector('.theme-icon');i.innerHTML=currentTheme==='dark'?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>' :currentTheme==='light'?'<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>' :'<rect x="2" y="4" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="2"/>';}    
     function toggleTheme(){currentTheme=currentTheme==='light'?'dark':currentTheme==='dark'?'system':'light';applyTheme(currentTheme);}if(window.matchMedia('(prefers-color-scheme: dark)').matches){currentTheme='system';}applyTheme(currentTheme);
 
     /* --- Dynamic favicon swap --- */
