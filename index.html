@@ -5,55 +5,102 @@
   <title>Charles A. Kantor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Personal page of Charles A. Kantor">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://charlesakantor.com/" />
+
+  <!-- Dynamic favicon: CK SVG (default) -->
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000000'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Space Grotesk, sans-serif' font-weight='600' font-size='16' fill='%23ffffff'%3Eck%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph / Twitter preview -->
+  <meta property="og:title" content="Charles A. Kantor" />
+  <meta property="og:description" content="Official page of Charles A. Kantor — contact and projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://charlesakantor.com" />
+  <meta property="og:image" content="https://charlesakantor.com/avatar.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Charles A. Kantor",
+    "url":"https://charlesakantor.com",
+    "email":"mailto:ck@charlesakantor.com",
+    "image":"https://charlesakantor.com/avatar.png",
+    "jobTitle":"Your Primary Role or Expertise",
+    "sameAs":[
+      "https://x.com/charlesakantor",
+      "https://www.linkedin.com/in/charlesakantor/",
+      "https://github.com/charlesakantor"
+    ]
+  }
+  </script>
+
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 20px;
-      color: #0b0b0b;
-      background: #fafafa;
-    }
+    :root{--bg:#ffffff;--fg:#000000}
+    html[data-theme="dark"]{--bg:#000000;--fg:#ffffff}
 
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+    html,body{height:100%;margin:0;font-family:'Space Grotesk',sans-serif;font-size:14px;background:var(--bg);color:var(--fg);transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
+    body{display:flex;align-items:center;justify-content:center;text-align:center;position:relative;line-height:1.5}
 
-    h1 {
-      font-weight: 500;
-      margin: 0 0 0.5em;
-    }
+    h1{font-weight:500;margin:0 0 .25em;font-size:22px;letter-spacing:-.01em}
+    p{margin:.15em 0;font-size:15px}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      position: relative;
-    }
+    a{color:inherit;text-decoration:none;position:relative}
+    a::after{content:'';position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:currentColor;opacity:.4;transform:scaleX(0);transition:transform .25s}
+    a:hover::after{transform:scaleX(1)}
 
-    a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 100%;
-      height: 1px;
-      background: currentColor;
-      transform: scaleX(0);
-      transition: transform .3s ease;
-    }
+    .social-links{opacity:.8;margin-top:.5em;display:flex;justify-content:center;align-items:center;gap:8px;font-size:13px}
+    .separator{opacity:.6;font-size:11px;margin:0 2px}
 
-    a:hover::after {
-      transform: scaleX(1);
-    }
+    /* Theme toggle */
+    .theme-toggle{position:fixed;top:18px;right:18px;padding:0;width:22px;height:22px;background:none;border:none;cursor:pointer;color:var(--fg);opacity:.65;transition:opacity .2s}
+    .theme-toggle:hover{opacity:1}
+    .theme-icon{width:14px;height:14px}
   </style>
 </head>
 <body>
+  <!-- Theme toggle button -->
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <svg class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="20" height="12" rx="2" stroke-width="2" />
+      <path d="M8 20h8M12 16v4" stroke-width="2" />
+    </svg>
+  </button>
+
+  <!-- Main content -->
   <div>
-    <h1>Charles&nbsp;A.&nbsp;Kantor</h1>
+    <h1>Charles A. Kantor</h1>
     <p><a href="mailto:ck@charlesakantor.com">ck@charlesakantor.com</a></p>
+    <p class="social-links">
+      <a href="https://x.com/charlesakantor" target="_blank" rel="noopener">X</a>
+      <span class="separator">·</span>
+      <a href="https://www.linkedin.com/in/charlesakantor/" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
   </div>
+
+  <script>
+    /* --- Theme toggle --- */
+    let currentTheme='system';
+    function applyTheme(t){document.documentElement.dataset.theme=t;updateToggleIcon();}
+    function updateToggleIcon(){const i=document.querySelector('.theme-icon');i.innerHTML=currentTheme==='dark'?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>':currentTheme==='light'?'<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M17.36 17.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M17.36 6.64l1.42-1.42" stroke="currentColor" stroke-width="2"/>':'<rect x="2" y="4" width="20" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="2"/>';}
+    function toggleTheme(){currentTheme=currentTheme==='light'?'dark':currentTheme==='dark'?'system':'light';applyTheme(currentTheme);}if(window.matchMedia('(prefers-color-scheme: dark)').matches){currentTheme='system';}applyTheme(currentTheme);
+
+    /* --- Dynamic favicon swap --- */
+    const ckIcon=document.getElementById('favicon').href;
+    const avatarIcon="data:image/png;base64,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";
+    let showAvatar=false;
+    setInterval(()=>{
+      const link=document.getElementById('favicon');
+      showAvatar=!showAvatar;
+      link.type=showAvatar?'image/png':'image/svg+xml';
+      link.href=showAvatar?avatarIcon:ckIcon;
+    },5000);
+  </script>
 </body>
 </html>
