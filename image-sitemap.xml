@@ -3,15 +3,24 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://charlesakantor.com/</loc>
-
     <image:image>
       <image:loc>https://charlesakantor.com/charles-kantor-avatar.webp</image:loc>
-      <image:title>Charles Kantor portrait</image:title>
+      <image:title>Charles Kantor - French AI Entrepreneur</image:title>
     </image:image>
-
     <image:image>
       <image:loc>https://charlesakantor.com/charles-kantor-stage-2025.webp</image:loc>
-      <image:title>Charles Kantor onstage — VivaTech 2025</image:title>
+      <image:title>Charles Kantor Speaking at VivaTech 2025 on Superintelligence and AGI</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://charlesakantor.com/press/</loc>
+    <image:image>
+      <image:loc>https://charlesakantor.com/charles-kantor-conference-audience.webp</image:loc>
+      <image:title>Charles Kantor Keynote Conference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://charlesakantor.com/charles-kantor-michael-dell-panel-agi-infrastructure-cloud.webp</image:loc>
+      <image:title>Charles Kantor Michael Dell AGI Infrastructure Panel</image:title>
     </image:image>
   </url>
 </urlset>
